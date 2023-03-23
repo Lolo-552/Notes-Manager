@@ -33,15 +33,13 @@ namespace Notes_Manager.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("karwier47@gmail.com", "Example User"),
+                From = new EmailAddress("example@gmail.com", "Example User"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message
             };
             msg.AddTo(new EmailAddress(toEmail));
 
-            // Disable click tracking.
-            // See https://sendgrid.com/docs/User_Guide/Settings/tracking.html
             msg.SetClickTracking(false, false);
             var response = await client.SendEmailAsync(msg);
 

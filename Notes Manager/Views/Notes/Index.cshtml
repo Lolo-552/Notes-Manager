@@ -5,23 +5,21 @@
 }
 
 <h1>Twoje Notatki</h1>
+<div class="d-flex justify-content-between">
+    <div>
+        <a asp-action="Create" class="action-button">Dodaj</a>
+        <a asp-controller="Home" asp-action="Index" class="action-button">Wstecz</a>
+    </div>
+    <form class="d-inline">
+        <input placeholder="Wyszukiwarka" class="form-control w-auto d-inline" type="text" name="SearchString" />
+        <input class="action-button" type="submit" value="Szukaj" />
 
-<p>
-    <a asp-action="Create" class="action-button">Dodaj</a>
-    <a asp-controller="Home" asp-action="Index" class="action-button">Wstecz</a>
-    <form>
-        <p>
-            Title: <input type="text" name="SearchString" />
-            <input type="submit" value="Filter" />
-        </p>
-        <select name="Category" onchange="this.form.submit()">
-            @foreach(var item in Model)
-            {
-                <option>@item.Category.Name</option>
-            }
+        <select class="form-control w-auto d-inline" name="Category" asp-items="ViewBag.CategoryName" onchange="this.form.submit()">
+            <option disabled selected hidden>Kategorie</option>
+            <option>Wszystkie</option>
         </select>
     </form>
-</p>
+</div>
 <div class="d-flex flex-wrap justify-content-center gap-3">
     @foreach (var item in Model)
     {
@@ -34,7 +32,6 @@
             </div>
             <a asp-action="Details" asp-route-id="@item.Id">
                 <p>@Html.DisplayFor(modelItem => item.Title)</p>
-                <p>@Html.DisplayFor(modelItem => item.Content)</p>
             </a>
         </div>
     }

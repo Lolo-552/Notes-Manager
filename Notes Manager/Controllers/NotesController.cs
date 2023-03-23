@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,6 +12,7 @@ using Notes_Manager.Models;
 
 namespace Notes_Manager.Controllers
 {
+    [Authorize]
     public class NotesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -26,6 +28,12 @@ namespace Notes_Manager.Controllers
         public async Task<IActionResult> Index(string SearchString, string Category)
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
+            ViewData["CategoryName"] = new SelectList(_context.Category.Where(x => x.UserId == user.Id), "Name", "Name");
+            if (!string.IsNullOrEmpty(Category) && Category!="Wszystkie")
+            {
+                var applicationDbContext = _context.Notes.Include(n => n.Category).Include(n => n.user).Where(x => x.UserId == user.Id && x.Category.Name == Category);
+                return View(await applicationDbContext.ToListAsync());
+            }
             if (!string.IsNullOrEmpty(SearchString))
             {
                 var applicationDbContext = _context.Notes.Include(n => n.Category).Include(n => n.user).Where(x => x.UserId == user.Id && x.Title.Contains(SearchString) || x.Content.Contains(SearchString) || x.Category.Name.Contains(SearchString));
@@ -35,7 +43,7 @@ namespace Notes_Manager.Controllers
             {
                 var applicationDbContext = _context.Notes.Include(n => n.Category).Include(n => n.user).Where(x => x.UserId == user.Id);
                 return View(await applicationDbContext.ToListAsync());
-            } 
+            }
         }
 
         // GET: Notes/Details/5
