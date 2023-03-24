@@ -33,7 +33,7 @@ namespace Notes_Manager.Services
             var client = new SendGridClient(apiKey);
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("example@gmail.com", "Example User"),
+                From = new EmailAddress("karwier47@gmail.com"),
                 Subject = subject,
                 PlainTextContent = message,
                 HtmlContent = message
