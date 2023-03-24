@@ -72,8 +72,6 @@ namespace Notes_Manager.Controllers
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            //}
-            return View(category);
         }
 
         // GET: Categories/Edit/5
@@ -126,9 +124,6 @@ namespace Notes_Manager.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-           // }
-            //ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", category.UserId);
-            return View(category);
         }
 
         // GET: Categories/Delete/5

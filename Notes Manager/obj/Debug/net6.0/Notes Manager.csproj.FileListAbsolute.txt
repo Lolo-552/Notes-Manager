@@ -279,3 +279,9 @@ C:\Users\lolo\source\repos\Notes Manager\Notes Manager\obj\Debug\net6.0\Notes Ma
 C:\Users\lolo\source\repos\Notes Manager\Notes Manager\obj\Debug\net6.0\ref\Notes Manager.dll
 C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\SendGrid.dll
 C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\lolo\source\repos\Notes Manager\Notes Manager\bin\Debug\net6.0\System.Memory.Data.dll

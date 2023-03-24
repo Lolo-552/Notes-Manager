@@ -2,23 +2,8 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2023-03-24T01:08:24.947397Z"
-    },
-    "secrets1": {
-      "restored": true,
-      "restoreTime": "2023-03-24T12:39:09.015115Z"
+      "restoreTime": "2023-03-24T14:09:13.8516175Z"
     }
   },
-  "parameters": {
-    "secrets1.resourceGroupName": {
-      "Name": "secrets1.resourceGroupName",
-      "Type": "resourceGroup",
-      "Value": "webappsresourcesgroup"
-    },
-    "secrets1.subscriptionId": {
-      "Name": "secrets1.subscriptionId",
-      "Type": "subscription",
-      "Value": "05296f14-a5e1-44ba-87dc-4ce6e6cb753e"
-    }
-  }
+  "parameters": {}
 }

@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "secrets1": {
+      "ignored": "true",
+      "type": "secrets.keyVault"
+    },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:DefaultConnection"
-    },
-    "secrets1": {
-      "type": "secrets",
-      "connectionId": "VaultUri",
+      "connectionId": "ConnectionStrings:DefaultConnection",
       "dynamicId": null
     }
   }

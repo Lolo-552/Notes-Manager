@@ -5,13 +5,6 @@
       "type": "mssql.onprem",
       "connectionId": "ConnectionStrings:DefaultConnection",
       "dynamicId": null
-    },
-    "secrets1": {
-      "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/NotesManagervault",
-      "type": "secrets.keyVault",
-      "connectionId": "VaultUri",
-      "dynamicId": null
     }
   }
 }
