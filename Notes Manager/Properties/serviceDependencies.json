@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "secrets1": {
-      "type": "secrets",
-      "dynamicId": null
-    },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:DefaultConnection",
+      "connectionId": "ConnectionStrings:DefaultConnection"
+    },
+    "secrets1": {
+      "type": "secrets",
+      "connectionId": "VaultUri",
       "dynamicId": null
     }
   }
