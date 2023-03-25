@@ -8,7 +8,7 @@ login: karwier47@gmail.com
 hasło: 1qazXSW@  
 
 ## Wykorzystane technologie
-- C# MVC
+- C# .NET MVC
 - Bootstrap 5
 - HTML/CSS
 - Microsoft SQL Server
