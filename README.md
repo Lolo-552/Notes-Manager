@@ -15,7 +15,7 @@ hasło: 1qazXSW@
 - Entity Framework
 
 ## Zaimplementowane funkcjonalności
-- wysyłanie emaili dotyczących logowania przy użyciu SendGri
+- wysyłanie emaili dotyczących logowania przy użyciu SendGrid
 - dodawanie/usuwanie/edycja notatek
 - wyszukiwane notatek za pomocą tekstu zawartego w tytule i kategorii
 - filtrowanie notatek kategoriami
